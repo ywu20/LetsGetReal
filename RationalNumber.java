@@ -9,16 +9,16 @@ public class RationalNumber extends RealNumber
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
+    
     super(0.0);
     if(deno<0){
-      deno=-deno;
-      nume=-nume;
+      deno= -1*deno;
+      nume= -1*nume;
     }
     if(deno==0){
       nume=0;
       deno=1;
     }
-
     numerator=nume;
     denominator=deno;
     reduce();
@@ -71,7 +71,7 @@ public class RationalNumber extends RealNumber
   *@param b the second integer
   *@return the value of the GCD
   */
-  private static int gcd(int a, int b) 
+  private static int gcd(int a, int b)
     {
         if (a == 0)
             return b;
@@ -95,7 +95,7 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-    int GCD=gcd(numerator,denominator);
+    int GCD=gcd(Math.abs(numerator),denominator);
     numerator=numerator/GCD;
     denominator=denominator/GCD;
   }

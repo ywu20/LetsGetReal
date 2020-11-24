@@ -22,6 +22,10 @@ public class Tester{
     System.out.println(h.getValue());
   //  System.out.println(i.getValue());
 
+  System.out.println(e);
+  System.out.println(f);
+  System.out.println(g);
+  System.out.println(h);
     System.out.println(e.getNumerator());
     System.out.println(e.getDenominator());
 
