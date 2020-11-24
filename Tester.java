@@ -15,12 +15,12 @@ public class Tester{
     RationalNumber f= new RationalNumber(-3,5);
     RationalNumber g= new RationalNumber(3,-5);
     RationalNumber h= new RationalNumber(-3,-5);
-    RationalNumber i= new RationalNumber(3,0);
+  //  RationalNumber i= new RationalNumber(3,0);
     System.out.println(e.getValue());
     System.out.println(f.getValue());
     System.out.println(g.getValue());
     System.out.println(h.getValue());
-    System.out.println(i.getValue());
+  //  System.out.println(i.getValue());
 
     System.out.println(e.getNumerator());
     System.out.println(e.getDenominator());
@@ -30,6 +30,12 @@ public class Tester{
 
     System.out.println(e.equals(f));
     System.out.println(e.equals(h));
+
+    RationalNumber j= new RationalNumber(-10,-5);
+    RationalNumber k= new RationalNumber(30,3);
+
+    System.out.println(j);
+    System.out.println(k);
 
 
 

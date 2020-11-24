@@ -21,6 +21,7 @@ public class RationalNumber extends RealNumber
 
     numerator=nume;
     denominator=deno;
+    reduce();
   }
 
   public double getValue(){
@@ -72,8 +73,17 @@ public class RationalNumber extends RealNumber
   */
   private static int gcd(int a, int b){
     /*use euclids method or a better one*/
-    http://sites.math.rutgers.edu/~greenfie/gs2004/euclid.html
-    return 0;
+    int c=Math.max(a,b);
+    int d=Math.min(a,b);
+    int out=d;
+    while(c%d != 0){
+      out=d;
+      int e=c%d;
+      c=d;
+      d=e;
+
+    }
+    return out;
   }
 
   /**
@@ -82,7 +92,9 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-
+    int GCD=gcd(numerator,denominator);
+    numerator=numerator/GCD;
+    denominator=denominator/GCD;
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
