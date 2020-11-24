@@ -28,6 +28,9 @@ public class Tester{
     System.out.println(e.reciprocal());
     System.out.println(f.reciprocal());
 
+    System.out.println(e.equals(f));
+    System.out.println(e.equals(h));
+
 
 
   }
