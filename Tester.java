@@ -15,12 +15,13 @@ public class Tester{
     RationalNumber f= new RationalNumber(-3,5);
     RationalNumber g= new RationalNumber(3,-5);
     RationalNumber h= new RationalNumber(-3,-5);
-  //  RationalNumber i= new RationalNumber(3,0);
+    RationalNumber i= new RationalNumber(3,0);
     System.out.println(e.getValue());
     System.out.println(f.getValue());
     System.out.println(g.getValue());
     System.out.println(h.getValue());
-  //  System.out.println(i.getValue());
+    System.out.println(i.getValue());
+    System.out.println(a.add(i));
 
   System.out.println(e);
   System.out.println(f);

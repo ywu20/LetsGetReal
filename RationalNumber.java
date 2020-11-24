@@ -9,8 +9,7 @@ public class RationalNumber extends RealNumber
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    
-    super(0.0);
+    super(nume/(double)deno);
     if(deno<0){
       deno= -1*deno;
       nume= -1*nume;
