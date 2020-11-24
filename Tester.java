@@ -6,5 +6,9 @@ public class Tester{
     RealNumber d= new RealNumber(10.4531);
 
     System.out.println(a.equals(d));
+    System.out.println(a.add(d));
+    System.out.println(a.subtract(d));
+    System.out.println(a.multiply(d));
+    System.out.println(a.divide(d));
   }
 }
