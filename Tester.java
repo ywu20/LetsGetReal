@@ -1,5 +1,5 @@
 public class Tester{
-  public static void main(String[] args
+  public static void main(String[] args){
   /*
     RealNumber a = new RealNumber(10.453);
     RealNumber b= new RealNumber(100.2);
