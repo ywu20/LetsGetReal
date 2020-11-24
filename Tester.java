@@ -21,6 +21,14 @@ public class Tester{
     System.out.println(g.getValue());
     System.out.println(h.getValue());
     System.out.println(i.getValue());
-    
+
+    System.out.println(e.getNumerator());
+    System.out.println(e.getDenominator());
+
+    System.out.println(e.reciprocal());
+    System.out.println(f.reciprocal());
+
+
+
   }
 }
