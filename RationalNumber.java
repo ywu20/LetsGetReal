@@ -71,19 +71,22 @@ public class RationalNumber extends RealNumber
   *@param b the second integer
   *@return the value of the GCD
   */
+  private static int gcd(int a, int b) 
+    {
+        if (a == 0)
+            return b;
+
+        return gcd(b%a, a);
+    }
+  /*
   private static int gcd(int a, int b){
     /*use euclids method or a better one*/
+    /*
     int c=Math.max(a,b);
     int d=Math.min(a,b);
-    int out=d;
-    while(c%d != 0){
-      out=d;
-      int e=c%d;
-      c=d;
-      d=e;
-
-    }
-    return out;
+    if (d == 0){
+        return c;}
+    return gcd(c, c%d);
   }
 
   /**
@@ -101,26 +104,31 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    RationalNumber out =new RationalNumber(other.numerator*numerator, other.denominator*denominator);
+    return out;
   }
 
   /**
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return null;
+    other=other.reciprocal();
+    return multiply(other);
   }
 
   /**
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int commonDeno=other.denominator*denominator/gcd(other.denominator, denominator);
+    RationalNumber out =new RationalNumber(other.numerator*(commonDeno/other.denominator)+numerator*(commonDeno/denominator), commonDeno);
+    return out;
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    RationalNumber otherAdd = new RationalNumber(-1*other.numerator, other.denominator);
+    return add(otherAdd);
   }
 }

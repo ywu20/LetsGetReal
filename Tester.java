@@ -37,6 +37,11 @@ public class Tester{
     System.out.println(j);
     System.out.println(k);
 
+    System.out.println(j.add(e));
+    System.out.println(k.subtract(f));
+    System.out.println(j.multiply(g));
+    System.out.println(k.divide(g));
+
 
 
   }
