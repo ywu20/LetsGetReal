@@ -22,9 +22,9 @@ public abstract class Number{
   *are within 0.00001 of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  public boolean equals(RealNumber other){
+  public boolean equals(Number other){
     if (this.getValue()==0 || other.getValue()==0){
-      return this.getValue()==other.getValue();
+      return this.getValue()== other.getValue();
     }
     if(Math.abs((other.getValue()-this.getValue())/this.getValue())<=0.00001 || Math.abs((other.getValue()-this.getValue())/other.getValue())<=0.00001){
       return true;
