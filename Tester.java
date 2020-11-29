@@ -1,6 +1,6 @@
 public class Tester{
   public static void main(String[] args){
-  /*
+/*
     RealNumber a = new RealNumber(10.453);
     RealNumber b= new RealNumber(100.2);
     RealNumber c= new RealNumber(Math.sqrt(2));
@@ -22,7 +22,7 @@ public class Tester{
     System.out.println(g.getValue());
     System.out.println(h.getValue());
     System.out.println(i.getValue());
-    System.out.println(a.add(i));
+  //  System.out.println(a.add(i));
 
   System.out.println(e);
   System.out.println(f);
@@ -47,8 +47,10 @@ public class Tester{
     System.out.println(k.subtract(f));
     System.out.println(j.multiply(g));
     System.out.println(k.divide(g));
+    System.out.println(a.compareTo(b));
+    System.out.println(e.compareTo(c));
+    System.out.println(c.compareTo(e));
 */
-
 
   }
 }
