@@ -1,4 +1,4 @@
-public class RationalNumber extends RealNumber
+public class RationalNumber extends Number
 {
   private int numerator, denominator;
 
@@ -9,7 +9,7 @@ public class RationalNumber extends RealNumber
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
-    super(nume/(double)deno);
+    //super(nume/(double)deno);
     if(deno<0){
       deno= -1*deno;
       nume= -1*nume;
@@ -62,6 +62,12 @@ public class RationalNumber extends RealNumber
   *@return the value expressed as "3/4" or "8/3"
   */
   public String toString(){
+    if(numerator==0){
+      return "0";
+    }
+    if(denominator==1){
+      return ""+numerator;
+    }
     return numerator+"/"+denominator;
   }
 
@@ -77,16 +83,6 @@ public class RationalNumber extends RealNumber
 
         return gcd(b%a, a);
     }
-  /*
-  private static int gcd(int a, int b){
-    /*use euclids method or a better one*/
-    /*
-    int c=Math.max(a,b);
-    int d=Math.min(a,b);
-    if (d == 0){
-        return c;}
-    return gcd(c, c%d);
-  }
 
   /**
   *Divide the numerator and denominator by the GCD
